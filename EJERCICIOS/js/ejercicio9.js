@@ -12,23 +12,23 @@ while (isNaN(num2)) {
     num2 = parseInt(prompt("Introduce otro número."))
 }
 
-operacion = prompt("Introduce una opetración: \nSumar. \nRestar. \nMultiplicar. \nDividir.")
+operacion = prompt("Introduce una operación: \nSumar. \nRestar. \nMultiplicar. \nDividir.")
 
 switch (operacion) {
-    case "+":
+    case "Sumar":ç
         alert(`${num1} + ${num2} = ${num1 + num2}`)
         break;
 
-        case "-":
-            alert(`${num1} - ${num2} = ${num1 - num2}`)
-            break;
+    case "Restar":
+        alert(`${num1} - ${num2} = ${num1 - num2}`)
+        break;
 
-            case "*":
-                alert(`${num1} * ${num2} = ${num1 * num2}`)
-                break;
+    case "Multiplicar":
+        alert(`${num1} * ${num2} = ${num1 * num2}`)
+        break;
 
-                case "/":
-                    alert(`${num1} / ${num2} = ${num1 / num2}`)
-                    break;
+    case "Dividir":
+        alert(`${num1} / ${num2} = ${num1 / num2}`)
+        break;
 
 }
