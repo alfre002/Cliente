@@ -15,7 +15,7 @@ while (isNaN(num2)) {
 operacion = prompt("Introduce una operación: \nSumar. \nRestar. \nMultiplicar. \nDividir.")
 
 switch (operacion) {
-    case "Sumar":ç
+    case "Sumar":
         alert(`${num1} + ${num2} = ${num1 + num2}`)
         break;
 
@@ -28,7 +28,18 @@ switch (operacion) {
         break;
 
     case "Dividir":
-        alert(`${num1} / ${num2} = ${num1 / num2}`)
+        try{
+            if (`${num2}`==0){
+                throw new Error("No se puede dividir por 0.")
+            } else {
+            alert(`${num1} / ${num2} = ${num1 / num2}`)
+            }
+        } catch (error) {
+            console.log(`Se produjo el siguiente error: ${error}`)
+        }
         break;
+
+    default: 
+    alert("El operador introducido no es válido.")
 
 }
