@@ -1,14 +1,12 @@
-"use strict";
-
-function recursiva(num) {
-
-  if (num === 0) {
-    console.log("Par.");
-  } else if (num === 1) {
-    console.log("Impar.")
-  } else {
-    recursiva(num-2);
+const producto = {
+  nombre: 'manzana',
+  categoria: 'frutas',
+  precio: 1.99,
+  nutrientes: {
+    carbs: 0.95,
+    grasas: 0.3,
+    proteina: 0.2
   }
 }
 
-recursiva(23);
+console.log(producto['nutrientes'].proteina)
