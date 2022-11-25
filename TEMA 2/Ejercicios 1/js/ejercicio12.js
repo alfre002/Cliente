@@ -9,11 +9,24 @@ const btnEnviar = document.querySelector("#enviar")
 const esAnagrama = () => {
     // selecciono las palabras
     const campos = document.getElementsByTagName("input")
-    // elimino los espacios
-    for(let campo of campos) {
-        campo.value.split(' ').join('')
-        console.log(campo.value)
+    // convertir a array, ordenar alfabeticamente y eliminar espacios
+    const campo1 = campos[0].value.toLowerCase().replace(/ /g,'').split('').sort()
+    const campo2 = campos[1].value.toLowerCase().replace(/ /g,'').split('').sort()
+    // compruebo si son anagramas
+    console.log(campo1.toString().toLowerCase())
+    console.log(campo2.toString().toLowerCase())
+    if(campo1.toString()==campo2.toString()) {
+        return true
+    } else {
+        return false
     }
 }
 
-btnEnviar.addEventListener("click", esAnagrama)
+btnEnviar.addEventListener("click", function(e) {
+    if(!esAnagrama()) {
+        e.preventDefault()
+        alert("Las palabras no son anagramas.")
+    } else {
+        alert("El formulario se ha enviado correctamente.")
+    }
+})
