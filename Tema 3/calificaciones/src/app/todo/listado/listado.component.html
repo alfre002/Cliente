@@ -1,0 +1,21 @@
+<h3 class="mt-4">Listado de Alumnos</h3>
+<div class="row">
+  <h3 *ngIf="nombres.length > 0; else noTareas">Alumnos</h3>
+  <ng-template #noTareas>
+    <div class="alert alert-info" role="alert">No hay Alumnos</div>
+  </ng-template>
+  <div class="list-group">
+    <a
+      href="#"
+      *ngFor="let nombre of nombres"
+      
+      class="list-group-item list-group-item-action"
+      >{{ nombre | uppercase }} </a>
+    <a
+      href="#"
+      *ngFor="let nota of notas"
+      
+      class="list-group-item list-group-item-action"
+      >{{ nota | uppercase }} </a>
+  </div>
+</div>

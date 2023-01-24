@@ -1,0 +1,21 @@
+<div class="row justify-content-md-center">
+  <div class="col col-md-5 my-2">
+    <input
+      class="form-control"
+      placeholder="Introduce el nombre del alumno"
+      type="text"
+      [(ngModel)]="nombre"
+    />
+    <input
+      class="form-control"
+      placeholder="Introduce la calificación del alumno"
+      type="text"
+      [(ngModel)]="nota"
+    />
+  </div>
+  <div class="col col-md-3 my-2">
+    <button type="button" (click)="addAlumno()" class="btn btn-primary">
+      Añadir Alumno
+    </button>
+  </div>
+</div>
