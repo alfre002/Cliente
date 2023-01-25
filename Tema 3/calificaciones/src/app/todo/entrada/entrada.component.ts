@@ -16,8 +16,11 @@ export class EntradaComponent implements OnInit {
   }
   addAlumno(): void {
     if(this._nombres != null && this._notas != null) {
-      this.serviciosTareas.nombres.push(this.nombre)
-      this.serviciosTareas.notas.push(this.nota)
+      let obj ={
+        'nombre': this._nombres,
+        'nota': this._notas
+      }
+      this.serviciosTareas.alumnos.push(obj)
     }
   }
   get nombre(): string {

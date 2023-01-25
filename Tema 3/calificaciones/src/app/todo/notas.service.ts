@@ -1,26 +1,17 @@
 import { Injectable } from '@angular/core';
+import { NonNullableFormBuilder } from '@angular/forms';
 
 @Injectable({
   providedIn: 'root'
 })
 export class NotasService {
-  private _nombres: string[] = []
-  private _notas: string[] = []
+  private _alumnos: any[] = []
 
-  public get nombres(): string[] {
-    return this._nombres
+  public get alumnos(): any[] {
+    return this._alumnos
   }
-
-  public set nombres(value: string[]) {
-    this._nombres = value
-  }
-
-  public get notas(): string[] {
-    return this._notas
-  }
-
-  public set notas(value: string[]) {
-    this._notas = value
+  public set alumnos(value: any[]) {
+    this._alumnos = value
   }
 
   constructor() { }

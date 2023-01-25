@@ -7,30 +7,19 @@ import { NotasService } from '../notas.service';
   styleUrls: ['./listado.component.css']
 })
 export class ListadoComponent implements OnInit {
-  private _nombres: string[] = []
-  private _notas: string[] = []
+  private _alumnos: string[] = []
 
   constructor(private servicioTareas: NotasService) { }
 
-  public get nombres(): string[] {
-    return this._nombres
+  public get alumnos(): string[] {
+    return this._alumnos
   }
-
-  public set nombres(value: string[]) {
-    this._nombres = value
-  }
-
-  public get notas(): string[] {
-    return this._notas
-  }
-
-  public set notas(value: string[]) {
-    this._notas = value
+  public set alumnos(value: string[]) {
+    this._alumnos = value
   }
 
   ngOnInit(): void {
-    this._nombres = this.servicioTareas.nombres
-    this._notas = this.servicioTareas.notas
+    this._alumnos = this.servicioTareas.alumnos
   }
 /*   completada(alumnoInscrito: string): void {
     this._nombres = this.nombres.filter((nombre) => nombre !== alumnoInscrito)
